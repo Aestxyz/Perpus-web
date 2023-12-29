@@ -113,7 +113,9 @@ Route::middleware(['auth', 'role:Petugas,Kepala'])->group(function () {
     Route::prefix('reports')->group(function () {
         Route::get('/users', [ReportController::class, 'users'])->name('reports.users');
         Route::get('/books', [ReportController::class, 'books'])->name('reports.books');
-        Route::get('/transactions', [ReportController::class, 'transactions'])->name('reports.transactions');
+        Route::get('/borrows', [ReportController::class, 'borrows'])->name('reports.borrows');
+        Route::get('/returns', [ReportController::class, 'returns'])->name('reports.returns');
+        Route::get('/penalties', [ReportController::class, 'penalties'])->name('reports.penalties');
     });
 });
 

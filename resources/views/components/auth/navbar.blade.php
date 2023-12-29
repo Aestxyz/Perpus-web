@@ -8,12 +8,12 @@
         </a>
     </li>
 
-    {{-- Manajemen User --}}
+    {{-- Master Data User --}}
     <li
         class="menu-item {{ request()->is(['users/officers', 'users/members', 'confirmation-account']) ? 'active' : '' }}">
         <a class="menu-link menu-toggle">
             <i class="menu-icon tf-icons mdi mdi-human"></i>
-            <div data-i18n="Users">Manajemen Users</div>
+            <div data-i18n="Users">Master Data Akun</div>
             <div class="badge bg-danger rounded-pill ms-auto {{ $pending == null ? 'd-none' : '' }}">
                 {{ $pending }}
             </div>
@@ -40,11 +40,11 @@
         </ul>
     </li>
 
-    {{-- manajemen Buku --}}
+    {{-- Master Data Buku --}}
     <li class="menu-item {{ request()->is(['categoires', 'books']) ? 'active' : '' }}">
         <a class="menu-link menu-toggle">
             <i class="menu-icon tf-icons mdi mdi-shape"></i>
-            <div data-i18n="Users">Manajemen Buku</div>
+            <div data-i18n="Users">Master Data Buku</div>
         </a>
         <ul class="menu-sub">
             <li class="menu-item">
@@ -69,7 +69,7 @@
     <li class="menu-item {{ request()->is(['transactions/waiting', 'transactions/walking']) ? 'active' : '' }}">
         <a class="menu-link menu-toggle">
             <i class="menu-icon tf-icons mdi mdi-sync-circle"></i>
-            <div data-i18n="borrow">Peminjaman</div>
+            <div data-i18n="borrow">Peminjaman Buku</div>
             <div class="badge bg-danger rounded-pill ms-auto {{ $waiting == null ? 'd-none' : '' }}">
                 {{ $waiting }}
             </div>
@@ -100,7 +100,7 @@
     <li class="menu-item {{ request()->is(['transactions/completed', 'penalties']) ? 'active' : '' }}">
         <a class="menu-link menu-toggle">
             <i class="menu-icon tf-icons mdi mdi-sync"></i>
-            <div data-i18n="return">Pengembalian</div>
+            <div data-i18n="return">Pengembalian Buku</div>
         </a>
         <ul class="menu-sub">
             <li class="menu-item">
@@ -130,7 +130,7 @@
         <ul class="menu-sub">
             <li class="menu-item">
                 <a href="{{ route('reports.users') }}" class="menu-link">
-                    <div data-i18n="Data-User">User</div>
+                    <div data-i18n="Data-User">Akun</div>
                 </a>
             </li>
         </ul>
@@ -143,8 +143,22 @@
         </ul>
         <ul class="menu-sub">
             <li class="menu-item">
-                <a href="{{ route('reports.transactions') }}" class="menu-link">
-                    <div data-i18n="Data-User">Transaksi</div>
+                <a href="{{ route('reports.borrows') }}" class="menu-link">
+                    <div data-i18n="Data-User">Peminjaman</div>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="{{ route('reports.returns') }}" class="menu-link">
+                    <div data-i18n="Data-User">Pengembalian</div>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="{{ route('reports.penalties') }}" class="menu-link">
+                    <div data-i18n="Data-User">Denda</div>
                 </a>
             </li>
         </ul>

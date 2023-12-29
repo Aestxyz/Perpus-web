@@ -59,7 +59,7 @@
                 <div class="app-brand demo">
                     <a href="/home" class="app-brand-link">
                         <img class="img-fluid" src="/image/logo.png" alt="" width="40px" height="40px">
-                        <span class="app-brand-text demo menu-text fw-semibold ms-2">Perpustakaan</span>
+                        <span class="app-brand-text demo menu-text fw-semibold ms-2 ">Admin Center</span>
                     </a>
 
                     <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
@@ -69,7 +69,7 @@
 
                 <div class="menu-inner-shadow"></div>
 
-                <x-auth.navbar></x-auth.>
+                <x-auth.navbar></x-auth.navbar>
             </aside>
             <!-- / Menu -->
 
@@ -85,8 +85,7 @@
                         </a>
                     </div>
 
-                    <div class="navbar-nav-right d-flex align-items-center bg-white rounded-3 shadow px-1 py-2"
-                        id="navbar-collapse">
+                    <div class="navbar-nav-right d-flex align-items-center rounded-3 px-1 py-2" id="navbar-collapse">
 
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
                             <!-- User -->
