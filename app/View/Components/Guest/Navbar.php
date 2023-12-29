@@ -2,6 +2,9 @@
 
 namespace App\View\Components\Guest;
 
+use App\Models\Book;
+use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\View\Component;
 
 class Navbar extends Component
@@ -23,6 +26,10 @@ class Navbar extends Component
      */
     public function render()
     {
-        return view('components.guest.navbar');
+        return view('components.guest.navbar', [
+            'book' => Book::count(),
+            'transaction' => Transaction::count(),
+            'user' => User::whereNotNull('email_verified_at')->count(),
+        ]);
     }
 }

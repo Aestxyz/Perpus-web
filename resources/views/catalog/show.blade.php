@@ -7,13 +7,6 @@
         <div class="row g-3">
             <div class="col-md">
                 <div class="card-body">
-                    <div class="cursor-pointer row">
-                        <img src="{{ Storage::url($book->image) }}" class="img rounded" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="card-body">
                     <div class="justify-content-between">
                         <h2 class="fw-bold text-wrap mb-0">{{ $book->title }}</h2>
                         <p>{{ $book->category->name }}</p>
@@ -37,7 +30,17 @@
 
                 </div>
             </div>
+            <div class="col-md">
+                <div class="card-body">
+                    <div class="cursor-pointer row">
+                        <img src="{{ Storage::url($book->image) }}" class="img rounded" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
+
+    </div>
+    <div class="card m-5 mt-1 p-3 shadow-none">
         <div class="divider">
             <div class="divider-text fw-border fs-5">Kamu Mungkin Juga Suka</div>
         </div>

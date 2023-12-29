@@ -12,8 +12,6 @@ use App\Http\Controllers\Officer\TransactionController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\Officer\BookshelfController;
 use App\Models\Book;
-use App\Models\Transaction;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,9 +28,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome', [
-        'book' => Book::count(),
-        'transaction' => Transaction::count(),
-        'user' => User::whereNotNull('email_verified_at')->count(),
+        'books' => Book::inRandomOrder()->limit(9)->get(),
     ]);
 });
 
