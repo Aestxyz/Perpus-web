@@ -54,7 +54,7 @@ class PenaltyController extends Controller
         $transaction = Transaction::findOrfail($id);
         $lates_day = Carbon::parse($transaction->return_date)->diffInDays();
 
-        $penalty = 1000;
+        $penalty = 500;
 
         $amount = $lates_day * $penalty;
 

@@ -88,7 +88,8 @@
     extend: 'print',
     orientation: 'landscape',
     pageSize: 'A4',
-    messageBottom: '<div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; grid-column-gap: 0px; grid-row-gap: 0px; height: 400px; padding-top:50px;"> <div></div> <div style=" grid-area: / 3;"> <p style="text-align: center;">Jambi, {{ Carbon\carbon::now()->format('d F Y') }}</p> <p style="text-align: center">Yang bertanda tangan dibawah ini:</p> <p style="text-align: center;padding-top:100px;">{{ Auth::user()->name }}</p> </div> </div>',
+    {{-- messageBottom: '<div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: 1fr; grid-column-gap: 0px; grid-row-gap: 0px; height: 400px; padding-top:50px;"> <div></div> <div style=" grid-area: / 3;"> <p style="text-align: center;">Jambi, {{ Carbon\carbon::now()->format('d F Y') }}</p> <p style="text-align: center">Yang bertanda tangan dibawah ini:</p> <p style="text-align: center;padding-top:100px;">{{ Auth::user()->name }}</p> </div> </div>', --}}
+    messageTop: '<p>Jambi, {{ Carbon\carbon::now()->format('d F Y') }}</p> <p>Dicetak oleh: {{ Auth::user()->name }}</p>',
     customize: function ( win ) {
     $(win.document.body).find( 'table' )
     .css( 'font-size', '8pt' )

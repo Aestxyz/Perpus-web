@@ -4,7 +4,7 @@
     <li class="menu-item {{ request()->is('home') ? 'active' : '' }}">
         <a href="/home" class="menu-link">
             <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
-            <div data-i18n="Home">Home</div>
+            <div data-i18n="Home">Dashboard</div>
         </a>
     </li>
 
